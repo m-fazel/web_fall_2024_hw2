@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "bf058cea-02a1-4df1-adee-170125a2c283",
+		"name": "web_HW2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15864034",
+		"_collection_link": "https://crimson-meteor-305018.postman.co/workspace/alterabo-flight-bot~955a88e7-b0dd-4736-b27e-a67a0359d196/collection/15864034-bf058cea-02a1-4df1-adee-170125a2c283?action=share&source=collection_link&creator=15864034"
+	},
+	"item": [
+		{
+			"name": "getForms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:{{port}}{{base_path}}/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "{{port}}{{base_path}}",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createForm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test3\",\n    \"status\": false,\n    \"method\": \"POST\",\n    \"finalAddress\": \"http://test.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:{{port}}{{base_path}}/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "{{port}}{{base_path}}",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getForm",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:{{port}}{{base_path}}/3",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "{{port}}{{base_path}}",
+					"path": [
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateForm",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:{{port}}{{base_path}}/3",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "{{port}}{{base_path}}",
+					"path": [
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteForm",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:{{port}}{{base_path}}/3",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "{{port}}{{base_path}}",
+					"path": [
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFormFields",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:{{port}}{{base_path}}/1/fields",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "{{port}}{{base_path}}",
+					"path": [
+						"1",
+						"fields"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateFormFields",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"fieldName\": \"test field 1\",\n        \"label\": \"test label 1\",\n        \"type\": \"NUMBER\",\n        \"defaultValue\": \"test dv\"\n    },\n    {\n        \"fieldName\": \"test field 2\",\n        \"label\": \"test label 2\",\n        \"type\": \"TEXT\",\n        \"defaultValue\": \"test dv\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:{{port}}{{base_path}}/2/fields",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "{{port}}{{base_path}}",
+					"path": [
+						"2",
+						"fields"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "togglePublishForm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"fieldName\": \"test field 3\",\n        \"label\": \"test label 3\",\n        \"type\": \"NUMBER\",\n        \"defaultValue\": \"test dv\"\n    },\n    {\n        \"fieldName\": \"test field 4\",\n        \"label\": \"test label 4\",\n        \"type\": \"TEXT\",\n        \"defaultValue\": \"test dv\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:{{port}}{{base_path}}/1/publish",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "{{port}}{{base_path}}",
+					"path": [
+						"1",
+						"publish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPublishedForms",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"fieldName\": \"test field 3\",\n        \"label\": \"test label 3\",\n        \"type\": \"NUMBER\",\n        \"defaultValue\": \"test dv\"\n    },\n    {\n        \"fieldName\": \"test field 4\",\n        \"label\": \"test label 4\",\n        \"type\": \"TEXT\",\n        \"defaultValue\": \"test dv\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:{{port}}{{base_path}}/published",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "{{port}}{{base_path}}",
+					"path": [
+						"published"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "port",
+			"value": "8080",
+			"type": "string"
+		},
+		{
+			"key": "base_path",
+			"value": "/forms",
+			"type": "string"
+		}
+	]
+}
